@@ -1,0 +1,31 @@
+﻿@inherits LayoutComponentBase
+
+<header>
+    <div class="logo">
+        <NavLink href="/" Match="NavLinkMatch.All">Petra Ingemarsson</NavLink>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li>
+                <NavLink href="/" Match="NavLinkMatch.All">Startsida</NavLink>
+            </li>
+            <li>
+                <NavLink href="portfolio">Portfolio</NavLink>
+            </li>
+            <li>
+                <NavLink href="education">Utbildning</NavLink>
+            </li>
+            <li>
+                <NavLink href="experience">Erfarenhet</NavLink>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    @Body
+</main>
+
+<footer>
+    <p>&copy; 2024 - Petra Ingemarsson</p>
+</footer>

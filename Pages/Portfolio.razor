@@ -1,0 +1,49 @@
+@page "/portfolio"
+@inject HttpClient Http
+
+<PageTitle>Portfolio</PageTitle>
+
+<article>
+    <h1>Portfolio</h1>
+
+    @if (projects == null)
+    {
+        <p>Hämtar innehåll...</p>
+    }
+    else
+    {
+        @foreach (var project in projects)
+        {
+            <section>
+                <h2>@project.Title</h2>
+                <p>@project.Description</p>
+                <p>Språk: @string.Join(", ", project.Languages)</p>
+                <p><a href="@project.Url" target="_blank">Länk med bra namn</a></p>
+                <img src="https://dt191g-portfolio.azurewebsites.net/images/@project.ImageName" alt="@project.Title">
+            </section>
+        }
+    }
+</article>
+
+@code {
+    // Array för att lagra projekt
+    private Project[]? projects;
+
+    // Metod som exekveras när komponenten initialiseras
+    protected override async Task OnInitializedAsync()
+    {
+        // Hämtar projekt i JSON-format från angiven URL
+        projects = await Http.GetFromJsonAsync<Project[]>("https://dt191g-portfolio.azurewebsites.net/api/portfolio");
+    }
+
+    // Klass som representerar ett projekt
+    public class Project
+    {
+        public int Id { get; set; }
+        public string? Title { get; set; }
+        public string? Description { get; set; }
+        public string? Url { get; set; }
+        public string? ImageName { get; set; }
+        public string[] Languages { get; set; } = Array.Empty<string>();
+    }
+}

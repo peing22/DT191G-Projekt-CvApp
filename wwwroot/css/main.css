@@ -1,0 +1,144 @@
+/* Importerar normaliseringsmall */
+@import url(/css/normalize.css);
+
+/* Dokumentet */
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 62.5%;
+}
+
+/* Reglerar alla boxar till border-box */
+* {
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    margin: 0;
+    margin-bottom: 100px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 300;
+    background-color: black;
+    color: white;
+}
+
+/* Sidhuvud */
+header {
+    text-align: center;
+}
+
+.logo {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-size: 3rem;
+}
+
+.logo a {
+    text-decoration: none;
+    font-family: "Mrs Saint Delafield", Arial, sans-serif;
+    color: white;
+}
+
+.nav-links {
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: 5px 0;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links .active {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.227), rgba(255, 255, 255, 0.109), rgba(255, 255, 255, 0));
+}
+
+/* Sidhuvud på skärmar över 600px */
+@media screen and (min-width: 600px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0 20px;
+    }
+
+    .logo {
+        padding-bottom: 20px;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        margin: 0;
+        border-bottom: 1px solid;
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+        border-image-slice: 1;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+        background-image: none;
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.611), rgba(255, 255, 255, 0));
+        border-image-slice: 1;
+    }
+}
+
+/* Sidhuvud på skärmar över 800px */
+@media screen and (min-width: 800px) {
+
+    header {
+        padding: 0 30px;
+    }
+
+    .logo {
+        font-size: 3.2rem;
+    }
+
+    .nav-links a {
+        margin-left: 10px;
+        font-size: 1.4rem;
+    }
+}
+
+/* Startsida */
+.start-page img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+
+
+
+/* Sidfot */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+    padding: 0 20px;
+}
+
+footer a {
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: white;
+    cursor: pointer;
+}
