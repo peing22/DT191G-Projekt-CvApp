@@ -117,12 +117,10 @@ p {
 /* Portfoliosida */
 .project {
     margin-bottom: 40px;
-    background-color: rgba(255, 255, 255, 0.109);
+    background-color: rgba(255, 255, 255, 0.173);
     border-radius: 5px;
-}
-
-.project .text {
-    padding: 10px 15px 0;
+    box-shadow: 0 0 10px black inset, 0 0 15px black inset;
+    padding: 20px 25px 25px;
 }
 
 .project a {
@@ -137,8 +135,7 @@ p {
 .project img {
     max-width: 100%;
     filter: grayscale(100%);
-    opacity: 0.9;
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px;
     margin-top: 5px;
 }
 
@@ -220,6 +217,12 @@ footer p {
         border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.611), rgba(255, 255, 255, 0));
         border-image-slice: 1;
     }
+
+    /* Portfoliosidan*/
+    .project {
+        background-color: black;
+        border: 1px solid rgba(255, 255, 255, 0.504);
+    }
 }
 
 
@@ -297,7 +300,7 @@ footer p {
     }
 
     .project .text {
-        padding: 20px 25px 5px;
+        padding-bottom: 5px;
     }
 
     .project img {
@@ -306,7 +309,6 @@ footer p {
 
     .project img:hover {
         filter: grayscale(0);
-        opacity: 1;
     }
 
     /* Utblidnings- och erfarenhetssida */
