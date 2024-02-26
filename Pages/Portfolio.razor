@@ -3,7 +3,7 @@
 
 <PageTitle>Portfolio</PageTitle>
 
-<article>
+<article class="portfolio">
     <h1>Portfolio</h1>
 
     @if (projects == null)
@@ -14,11 +14,13 @@
     {
         @foreach (var project in projects)
         {
-            <section>
+            <section class="project">
+                <div class="text">
                 <h2>@project.Title</h2>
                 <p>@project.Description</p>
-                <p>Språk: @string.Join(", ", project.Languages)</p>
-                <p><a href="@project.Url" target="_blank">Länk med bra namn</a></p>
+                <p>Språk: <em>@string.Join(", ", project.Languages)</em></p>
+                <p><a href="@project.Url" target="_blank">@project.Title</a> (öppnas i ny flik)</p>
+                </div>
                 <img src="https://dt191g-portfolio.azurewebsites.net/images/@project.ImageName" alt="@project.Title">
             </section>
         }

@@ -31,13 +31,13 @@ header {
 .logo {
     padding-top: 20px;
     padding-bottom: 5px;
-    font-size: 3rem;
+    font-size: 3.2rem;
 }
 
 .logo a {
     text-decoration: none;
     font-family: "Mrs Saint Delafield", Arial, sans-serif;
-    color: white;
+    color: #d18d9a;
 }
 
 .nav-links {
@@ -50,7 +50,7 @@ header {
     padding: 5px 0;
     margin-bottom: 5px;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: white;
     transition: 0.3s;
 }
@@ -59,13 +59,140 @@ header {
     background-image: radial-gradient(rgba(255, 255, 255, 0.227), rgba(255, 255, 255, 0.109), rgba(255, 255, 255, 0));
 }
 
-/* Sidhuvud på skärmar över 600px */
+/* Huvudinnehåll */
+main {
+    padding: 0 20px;
+}
+
+/* Rubriker och text */
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 20px 0;
+    color: #d4b2a6;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin: 10px 0;
+}
+
+/* Startsida */
+.start-page p {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    margin: 16px 0;
+}
+
+.start-page img {
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+/* Komponent för kontaktuppgifter */
+.contact {
+    margin: 20px 0;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #d18d9a;
+    transition: 0.3s;
+}
+
+.contact a:hover {
+    color: white;
+}
+
+/* Portfoliosida */
+.project {
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.109);
+    border-radius: 5px;
+}
+
+.project .text {
+    padding: 10px 15px 0;
+}
+
+.project a {
+    color: #d18d9a;
+    transition: 0.3s;
+}
+
+.project a:hover {
+    color: white;
+}
+
+.project img {
+    max-width: 100%;
+    filter: grayscale(100%);
+    opacity: 0.9;
+    border-radius: 0 0 5px 5px;
+    margin-top: 5px;
+}
+
+/* Utblidnings- och erfarenhetssida */
+.education,
+.experience {
+    max-width: 565px;
+    margin: auto;
+}
+
+.education section,
+.experience section {
+    margin-bottom: 40px;
+}
+
+.first-p {
+    margin-bottom: 0;
+}
+
+.period {
+    font-size: 1rem;
+    color: #d18d9a;
+    margin: 0;
+}
+
+.education ul,
+.experience ul {
+    padding-left: 13px;
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    list-style-type: square;
+}
+
+/* Sidfot */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* Skärmar över 600px */
 @media screen and (min-width: 600px) {
 
+    /* Sidhuvud */
     header {
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: center;
         padding: 0 20px;
     }
 
@@ -95,50 +222,113 @@ header {
     }
 }
 
-/* Sidhuvud på skärmar över 800px */
+
+
+/* Skärmar över 800px */
 @media screen and (min-width: 800px) {
 
+    /* Body */
+    body {
+        margin-bottom: 130px;
+    }
+
+    /* Sidhuvud */
     header {
         padding: 0 30px;
     }
 
-    .logo {
-        font-size: 3.2rem;
-    }
-
     .nav-links a {
         margin-left: 10px;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
-}
 
-/* Startsida */
-.start-page img {
-    width: 300px;
-    max-width: 100%;
-    border-radius: 50%;
-}
+    /* Rubriker och text */
+    h1 {
+        font-size: 4.8rem;
+        margin: 40px 0;
+    }
 
+    h2 {
+        font-size: 3rem;
+    }
 
+    p {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
 
+    /* Startsida */
+    .start-page {
+        max-width: 800px;
+        margin: auto;
+        margin-top: 5%;
+        display: flex;
+        column-gap: 40px;
+    }
 
-/* Sidfot */
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
+    .start-page p {
+        font-size: 2rem;
+    }
 
-footer p {
-    text-align: center;
-    padding: 0 20px;
-}
+    .start-page img {
+        max-width: 250px;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
 
-footer a {
-    transition: 0.3s;
-}
+    /* Komponent för kontaktuppgifter */
+    .contact {
+        max-width: 800px;
+        margin: auto;
+    }
 
-footer a:hover {
-    color: white;
-    cursor: pointer;
+    .contact h2 {
+        margin-bottom: 20px;
+    }
+
+    /* Portfoliosida */
+    .portfolio {
+        max-width: 565px;
+        margin: auto;
+    }
+
+    .project {
+        margin-bottom: 60px;
+    }
+
+    .project .text {
+        padding: 20px 25px 5px;
+    }
+
+    .project img {
+        transition: 1s;
+    }
+
+    .project img:hover {
+        filter: grayscale(0);
+        opacity: 1;
+    }
+
+    /* Utblidnings- och erfarenhetssida */
+    .first-p {
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+
+    .period {
+        font-size: 1.2rem;
+        margin: 5px 0;
+    }
+
+    .education ul,
+    .experience ul {
+        padding-left: 13px;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    /* Sidfot */
+    footer p {
+        margin: 30px 0;
+    }
 }
