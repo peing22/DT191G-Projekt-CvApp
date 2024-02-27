@@ -85,6 +85,11 @@ p {
 }
 
 /* Startsida */
+.start-page {
+    max-width: 335px;
+    margin: auto;
+}
+
 .start-page p {
     font-size: 1.6rem;
     line-height: 3rem;
@@ -99,6 +104,8 @@ p {
 /* Komponent för kontaktuppgifter */
 .contact {
     margin: 20px 0;
+    max-width: 335px;
+    margin: auto;
 }
 
 .contact p {
@@ -115,11 +122,16 @@ p {
 }
 
 /* Portfoliosida */
+.portfolio {
+    max-width: 335px;
+    margin: auto;
+}
+
 .project {
     margin-bottom: 40px;
-    background-color: rgba(255, 255, 255, 0.173);
+    background-color: black;
+    border: 1px solid rgba(255, 255, 255, 0.504);
     border-radius: 5px;
-    box-shadow: 0 0 10px black inset, 0 0 15px black inset;
     padding: 20px 25px 25px;
 }
 
@@ -142,7 +154,7 @@ p {
 /* Utblidnings- och erfarenhetssida */
 .education,
 .experience {
-    max-width: 565px;
+    max-width: 335px;
     margin: auto;
 }
 
@@ -218,14 +230,17 @@ footer p {
         border-image-slice: 1;
     }
 
-    /* Portfoliosidan*/
-    .project {
-        background-color: black;
-        border: 1px solid rgba(255, 255, 255, 0.504);
+    /* Portfoliosida */
+    .portfolio {
+        max-width: 495px;
+    }
+
+    /* Utblidnings- och erfarenhetssida */
+    .education,
+    .experience {
+        max-width: 495px;
     }
 }
-
-
 
 /* Skärmar över 800px */
 @media screen and (min-width: 800px) {
@@ -263,7 +278,6 @@ footer p {
     /* Startsida */
     .start-page {
         max-width: 800px;
-        margin: auto;
         margin-top: 5%;
         display: flex;
         column-gap: 40px;
@@ -282,7 +296,6 @@ footer p {
     /* Komponent för kontaktuppgifter */
     .contact {
         max-width: 800px;
-        margin: auto;
     }
 
     .contact h2 {
@@ -292,7 +305,6 @@ footer p {
     /* Portfoliosida */
     .portfolio {
         max-width: 565px;
-        margin: auto;
     }
 
     .project {
@@ -312,6 +324,11 @@ footer p {
     }
 
     /* Utblidnings- och erfarenhetssida */
+    .education,
+    .experience {
+        max-width: 565px;
+    }
+
     .first-p {
         font-size: 2rem;
         margin-bottom: 5px;
