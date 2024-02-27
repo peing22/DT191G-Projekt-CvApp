@@ -16,15 +16,16 @@
         {
             <section class="project">
                 <div class="text">
-                <h2>@project.Title</h2>
-                <p>@project.Description</p>
-                <p>Språk: <em>@string.Join(", ", project.Languages)</em></p>
-                <p><a href="@project.Url" target="_blank">@project.Title</a> (öppnas i ny flik)</p>
+                    <h2>@project.Title</h2>
+                    <p>@project.Description</p>
+                    <p>Språk: <em>@string.Join(", ", project.Languages)</em></p>
+                    <p><a href="@project.Url" target="_blank">@project.Title</a> (öppnas i ny flik)</p>
                 </div>
                 <img src="https://dt191g-portfolio.azurewebsites.net/images/@project.ImageName" alt="@project.Title">
             </section>
         }
     }
+    <ScrollToTop />
 </article>
 
 @code {

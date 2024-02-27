@@ -1,0 +1,11 @@
+@inject IJSRuntime JS
+
+<button class="scroll-to-top" @onclick="Scroll">Till toppen av sidan</button>
+
+@code {
+    // Metod för att anropa JavaScript vid klick på knapp
+    private void Scroll()
+    {
+        JS.InvokeVoidAsync("scrollToTop");
+    }
+}

@@ -26,6 +26,8 @@ body {
 /* Sidhuvud */
 header {
     text-align: center;
+    max-width: 335px;
+    margin: auto;
 }
 
 .logo {
@@ -52,7 +54,7 @@ header {
     text-decoration: none;
     font-size: 1.4rem;
     color: white;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .nav-links .active {
@@ -114,7 +116,7 @@ p {
 
 .contact a {
     color: #d18d9a;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .contact a:hover {
@@ -137,7 +139,7 @@ p {
 
 .project a {
     color: #d18d9a;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .project a:hover {
@@ -149,6 +151,24 @@ p {
     filter: grayscale(100%);
     border-radius: 5px;
     margin-top: 5px;
+}
+
+/* Komponent för skrolla-till-toppen-knapp */
+.scroll-to-top {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #d18d9a;
+    color: black;
+    border: 1px solid #d18d9a;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    transition: 0.5s;
+}
+
+.scroll-to-top:hover {
+    background-color: #ab6c78;
+    border: 1px solid #ab6c78;
+    cursor: pointer;
 }
 
 /* Utblidnings- och erfarenhetssida */
@@ -203,6 +223,7 @@ footer p {
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
+        max-width: none;
     }
 
     .logo {
@@ -321,6 +342,11 @@ footer p {
 
     .project img:hover {
         filter: grayscale(0);
+    }
+
+    /* Komponent för skrolla-till-toppen-knapp */
+    .scroll-to-top {
+        font-size: 1.6rem;
     }
 
     /* Utblidnings- och erfarenhetssida */
