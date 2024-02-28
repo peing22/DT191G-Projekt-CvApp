@@ -18,10 +18,20 @@
                 <div class="text">
                     <h2>@project.Title</h2>
                     <p>@project.Description</p>
-                    <p>Språk: <em>@string.Join(", ", project.Languages)</em></p>
+                    @if (project.Techniques.Length > 0)
+                    {
+                        <p>Tekniker: <em>@string.Join(", ", project.Techniques)</em></p>
+                    }
                     <p><a href="@project.Url" target="_blank">@project.Title</a> (öppnas i ny flik)</p>
                 </div>
-                <img src="https://dt191g-portfolio.azurewebsites.net/images/@project.ImageName" alt="@project.Title">
+                @if (project.ImageName != "-")
+                {
+                    <img src="https://dt191g-project-app.azurewebsites.net/images/@project.ImageName" alt="@project.Title">
+                }
+                else
+                {
+                    <img src="noimage.jpg" alt="Ingen bildfil uppladdad">
+                }
             </section>
         }
     }
@@ -36,7 +46,7 @@
     protected override async Task OnInitializedAsync()
     {
         // Hämtar projekt i JSON-format från angiven URL
-        projects = await Http.GetFromJsonAsync<Project[]>("https://dt191g-portfolio.azurewebsites.net/api/portfolio");
+        projects = await Http.GetFromJsonAsync<Project[]>("https://dt191g-project-app.azurewebsites.net/api/project");
     }
 
     // Klass som representerar ett projekt
@@ -47,6 +57,6 @@
         public string? Description { get; set; }
         public string? Url { get; set; }
         public string? ImageName { get; set; }
-        public string[] Languages { get; set; } = Array.Empty<string>();
+        public string[] Techniques { get; set; } = Array.Empty<string>();
     }
 }
