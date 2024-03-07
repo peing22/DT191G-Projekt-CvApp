@@ -26,7 +26,7 @@
                 </div>
                 @if (project.ImageName != "-")
                 {
-                    <img src="https://dt191g-project-app.azurewebsites.net/images/@project.ImageName" alt="@project.Title">
+                    <img src="http://localhost:5132/images/@project.ImageName" alt="@project.Title">
                 }
                 else
                 {
@@ -46,7 +46,7 @@
     protected override async Task OnInitializedAsync()
     {
         // Hämtar projekt i JSON-format från angiven URL
-        projects = await Http.GetFromJsonAsync<Project[]>("https://dt191g-project-app.azurewebsites.net/api/project");
+        projects = await Http.GetFromJsonAsync<Project[]>("http://localhost:5132/api/project");
     }
 
     // Klass som representerar ett projekt
